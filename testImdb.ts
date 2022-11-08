@@ -2,7 +2,7 @@
 
 import { Imdb } from "./Imdb";
 import { Movie } from "./Movie"
-import {schindlersList, reservoirDogs} from "./testMovie"
+import { schindlersList, reservoirDogs } from "./testMovie"
 
 let movies:Movie[] = [schindlersList, reservoirDogs]
 let movies_1:Movie[] = []

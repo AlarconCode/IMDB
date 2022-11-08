@@ -2,7 +2,6 @@
 
 import { Professional } from "./Professional"
 import { Imdb } from "./Imdb"
-const fs = require('fs')
 
 let newProfessional = new Professional('', 0, 0, false, '', 0, '')
 
@@ -17,8 +16,8 @@ newProfessional.profession = input.question('What is your profession?: ')
 newProfessional.nationality = input.question('What is your nationality: ')
 
 let imdb = new Imdb([])
-let movies:Imdb = imdb.readJSONtoImdb('imdbBBDD.json');
-imdb.movies = movies.movies
+let imdb2:Imdb = imdb.readJSONtoImdb('imdbBBDD.json');
+imdb.movies = imdb2.movies
 imdb.movies[0].actors.push(newProfessional)
 
 imdb.writeJSONToFile('./imdbBBDD.json')
